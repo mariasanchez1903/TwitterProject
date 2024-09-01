@@ -1,0 +1,109 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivProfilePicture"
+        android:layout_width="46dp"
+        android:layout_height="42dp"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_perfil" />
+
+    <TextView
+        android:id="@+id/tvUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Santiago"
+        app:layout_constraintBottom_toBottomOf="@id/ivProfilePicture"
+        app:layout_constraintStart_toEndOf="@id/ivProfilePicture"
+        app:layout_constraintTop_toTopOf="@id/ivProfilePicture" />
+
+    <ImageButton
+        android:id="@+id/ibOptions"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:background="#00FFFFFF"
+        android:padding="10dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@id/ivProfilePicture"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivProfilePicture"
+        app:srcCompat="@mipmap/ic_options" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivProfilePicture"
+        app:srcCompat="@drawable/img_cat" />
+
+    <LinearLayout
+        android:id="@+id/llMainOptions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/empty_divider"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2">
+
+        <ImageButton
+            android:id="@+id/ibComents"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/ic_coments" />
+
+        <ImageButton
+            android:id="@+id/ibLike"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/ic_like" />
+
+        <ImageButton
+            android:id="@+id/ibDisplay"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/ic_display" />
+
+        <ImageButton
+            android:id="@+id/ibSave"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/ic_save" />
+
+        <ImageButton
+            android:id="@+id/ibShare"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/ic_share" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
