@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">twitterApp</string>
+    <string name="for_you">Para ti</string>
+    <string name="following">Siguiendo</string>
+</resources>
