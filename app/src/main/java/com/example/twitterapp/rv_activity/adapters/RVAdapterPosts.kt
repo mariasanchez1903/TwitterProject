@@ -8,7 +8,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.twitterapp.Post
 import com.example.twitterapp.R
 
-class RVAdapterPosts (private var postList: List<Post>) : RecyclerView.Adapter<RVAdapterPosts.PostViewHolder>() {
+class RVAdapterPosts(
+    private var postList: List<Post>,
+    private val onPostClick: (Post) -> Unit
+) : RecyclerView.Adapter<RVAdapterPosts.PostViewHolder>() {
 
     class PostViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvUserName: TextView = itemView.findViewById(R.id.tvUsername)
@@ -20,7 +23,9 @@ class RVAdapterPosts (private var postList: List<Post>) : RecyclerView.Adapter<R
     }
 
     override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
-        holder.tvUserName.text = postList[position].userName
+        val post = postList[position]
+        holder.tvUserName.text = post.userName
+        holder.itemView.setOnClickListener { onPostClick(post) }
     }
 
     override fun getItemCount(): Int = postList.size
