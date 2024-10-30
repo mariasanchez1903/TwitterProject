@@ -31,22 +31,17 @@ class PostDetailActivity : AppCompatActivity() {
 
         post?.let {
             tvUserName.text = it.userName
-            // Configura los botones si es necesario
-            // Por ejemplo, puedes configurar onClickListeners para los botones
             ibComments.setOnClickListener {
-                // Acción para el botón de comentarios
             }
             ibLike.setOnClickListener {
                 Toast.makeText(this, "Like <3", Toast.LENGTH_SHORT).show()
             }
             ibDisplay.setOnClickListener {
-                // Acción para el botón de mostrar
             }
             ibSave.setOnClickListener {
                 Toast.makeText(this, "Publicación guardada", Toast.LENGTH_SHORT).show()
             }
             ibShare.setOnClickListener {
-                // Acción para el botón de compartir
             }
         }
     }
